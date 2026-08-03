@@ -21,12 +21,17 @@
   }
   *{box-sizing:border-box; margin:0; padding:0;}
   html{scroll-behavior:smooth;}
+html{
+    background:#e9e4da;
+  }
   body{
     font-family:'Noto Sans JP', sans-serif;
     background:var(--cream);
     color:var(--ink);
     line-height:1.9;
     -webkit-font-smoothing:antialiased;
+    max-width:480px;
+    margin:0 auto;
   }
   img{max-width:100%; display:block;}
   a{color:inherit;}
@@ -36,9 +41,20 @@
   .hero{
   position:relative;
   min-height:100svh;
-  background:
-    linear-gradient(180deg, rgba(11,17,48,.8) 0%, rgba(35,32,79,.7) 22%, rgba(75,58,115,.62) 48%, rgba(164,99,143,.58) 72%, rgba(227,169,160,.58) 92%, rgba(243,207,174,.62) 100%),
-    url('amanosakahoko.jpeg') center / contain no-repeat;
+ background:
+      linear-gradient(180deg,
+        rgba(11,17,48,.8) 0%,
+        rgba(23,25,64,.76) 12%,
+        rgba(35,32,79,.7) 24%,
+        rgba(55,45,97,.66) 36%,
+        rgba(75,58,115,.62) 48%,
+        rgba(120,79,129,.6) 60%,
+        rgba(164,99,143,.58) 72%,
+        rgba(196,134,152,.58) 82%,
+        rgba(227,169,160,.58) 92%,
+        rgba(243,207,174,.62) 100%
+      ),
+      url('amanosakahoko.jpeg') center / contain no-repeat;
   background-color:#241a3d;
   overflow:hidden;
   display:flex;
@@ -123,8 +139,10 @@
   }
   .hero-cta-block{
     position:relative; z-index:2;
-    padding:36px 26px 44px;
+    padding:80px 26px 50px;
+    margin-top:-40px;
     text-align:center;
+    background:linear-gradient(180deg, transparent 0%, rgba(245,241,232,.55) 45%, var(--cream) 85%);
   }
   .hero-date{
     font-family:'Noto Serif JP', serif;
@@ -242,7 +260,19 @@
     display:block; font-family:'Noto Sans JP',sans-serif;
     font-size:11px; letter-spacing:.14em; font-weight:400; color:#7a6f8f; margin-top:4px;
   }
-  .speaker-bio p{font-size:14px; color:#3a3548; margin-bottom:1em;}
+ .speaker-bio p{font-size:14px; color:#3a3548; margin-bottom:1em;}
+  .company-link-btn{
+    display:inline-block;
+    margin-top:8px;
+    padding:12px 28px;
+    border:1.5px solid var(--purple);
+    color:var(--purple);
+    font-weight:600;
+    font-size:14px;
+    border-radius:999px;
+    text-decoration:none;
+    letter-spacing:.03em;
+  }
 
   /* ---------- OVERVIEW TABLE ---------- */
   .overview-section{background:var(--navy); color:#f2eee0;}
@@ -332,12 +362,12 @@
   </div>
 
   <div class="hero-cta-block">
-    <a href="#apply" class="cta-btn">概要／お申し込みはこちら</a>
+   <a href="#overview" class="cta-btn">概要／お申し込みはこちら</a>
   </div>
 </header>
 
 <!-- MESSAGE -->
-<section class="message-section">
+<section class="overview-section" id="overview">
   <div class="section-inner s-body">
     <h2 class="s-title">過去を知り、今を見つめ、<br>未来へ志をつなぐ時間。</h2>
     <p class="big">神話の地・宮崎に生きる私たちだからこそ、思い出せることがあります。</p>
@@ -367,6 +397,9 @@
         <p>これまで年間230本の講演やセミナーを運営し、累計50,000人以上の方に向けメッセージしてきた実績を基に2023年開業。1年で2,560件の有料講座のお申込みを頂く。</p>
         <p>2023年9月法人化。TEDやPRESIDENTにも出演をし、2024年に「すべての日本人が誇り高く生きるための教科書」を発刊。</p>
         <p>日本人としてのルーツや誇り、本来の在り方を見つめ直し、"自分は何を原動力に生きるのか"を問い直す教育活動を全国で届けている。過去を知り、今を見つめ、未来へ志をつなぐ――多くの人の人生に火を灯し続けている教育家。</p>
+      </div>
+      <div style="text-align:center;">
+        <a class="company-link-btn" href="https://kokoh.co.jp/" target="_blank" rel="noopener">株式会社誇高 会社概要はこちら</a>
       </div>
     </div>
 
